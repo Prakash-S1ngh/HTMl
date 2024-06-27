@@ -1,0 +1,109 @@
+*{
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+h1{
+    text-align: center;
+    padding: 22px;
+}
+.container{
+    height: 1000px;
+    width: 100%;
+    position: absolute;
+}
+.block{
+    position: relative;
+    border: 3px black;
+    /* background-color: yellow; */
+    width: 90%;
+    height: 50%;
+}
+.chotabox{
+    text-align: center;
+    font-size: 3rem;
+    position: relative;
+    border: 3px solid blue;
+    width: 15rem;
+    height: 10rem;
+    background-color: aqua;
+    top: 3rem;
+    left: 4rem;
+    /* transition: all; */
+    transition: width 2s , height 4s ,transform 4s  ease-in 3s ;
+    
+    /* transition-duration: 2s; */
+}
+.chotabox:hover{
+    transform: translateX(1000px);
+    background-color: hotpink;
+    /* transform: rotate(45deg); */
+    width: 400px;
+    height: 400px;
+}
+.animation{
+    /* border: 3px solid black; */
+    /* background-color: skyblue; */
+    width: 90%;
+    height: 60%;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+p{
+    /* margin: auto; */
+    padding: 36px;
+}
+.but{
+    background-color: rgb(243, 74, 102);
+    position: relative;
+    border-radius: 14px;
+    height: 25%;
+    width: 35%;
+    border:2px solid black;
+    text-align: center;
+    color:white;
+    font-weight: bolder;
+    font-size: 3rem;
+    /* animation-name: Example;
+    animation-duration: 2s;
+    animation-timing-function: ease-in;
+    animation-direction: normal;
+    animation-iteration-count: 1s; */
+    transition: all 1s ease-in 3s;
+    
+
+}
+/* @keyframes Example {
+    from{
+        background-color: black;
+    }
+    to{
+        background-color: yellow;
+    }
+     
+ } */
+ .but::before{
+    border-radius: 14px;
+     content: "";
+     background-color: black;
+     position: absolute;
+     top: 0;
+     left: 0;
+     right: 0;
+     bottom: 0;
+     z-index: -1;
+     transform-origin: left;
+     transition: all 1s;
+     transform: scaleX(0);
+ }
+.but:hover{
+    /* transform: rotate(360deg); */
+    transform:scale(0.5) translateX(700px) rotate(360deg);
+    /* rotate: 360deg; */
+}
+.but:hover::before{
+   transform: scaleX(1);
+}
+
+    
